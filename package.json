@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@vime/core": "^5.3.1",
-    "@vime/svelte": "^5.3.1"
+    "@vime/svelte": "^5.3.1",
+    "svelte-icons-pack": "^2.0.0"
   }
 }
