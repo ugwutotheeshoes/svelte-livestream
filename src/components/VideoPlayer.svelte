@@ -50,7 +50,7 @@
       <Icon
         src={RedoOutlined}
         color="white"
-        size="20"
+        size="10"
         className="custom-icon"
         title="Custom icon params"
       /></button
@@ -67,6 +67,8 @@
   :global(.custom-icon) {
     margin-left: 3px;
     transform: rotate(20deg);
+    width: 20px;
+    height: 20px;
   }
   h3 {
     color: #000;
@@ -91,7 +93,7 @@
   .pos {
     position: absolute;
     top: 32%;
-    left: 29%;
+    left: 35%;
     font-size: 2rem;
     letter-spacing: 2px;
     color: #fff;
@@ -101,8 +103,9 @@
     position: absolute;
     display: flex;
     justify-content: center;
+    align-items: center;
     top: 43%;
-    left: 37%;
+    left: 41%;
     font-size: 1.2rem;
     padding: 6px;
     letter-spacing: 2px;
@@ -116,6 +119,16 @@
   }
 
   @media (max-width: 750px) {
+    :global(vm-playback-control) {
+      --vm-control-scale: 1.7;
+    }
+
+    :global(.custom-icon) {
+      margin-left: 3px;
+      transform: rotate(20deg);
+      width: 10px;
+      height: 10px;
+    }
     h3 {
       font-size: 1rem;
       margin: 0.2rem auto;
@@ -123,6 +136,33 @@
 
     p {
       font-size: 0.7rem;
+    }
+    .pos {
+      position: absolute;
+      top: 22%;
+      left: 36%;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      color: #fff;
+      font-weight: 400;
+    }
+    button {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 30%;
+      left: 40%;
+      font-size: 0.4rem;
+      padding: 6px;
+      letter-spacing: 2px;
+      font-weight: 400;
+      border: none;
+      border-radius: 25px;
+      background: transparent;
+      cursor: pointer;
+      text-transform: uppercase;
+      color: white;
     }
   }
 </style>
