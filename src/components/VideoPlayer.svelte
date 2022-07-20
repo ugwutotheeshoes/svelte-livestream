@@ -52,14 +52,10 @@
         title="Custom icon params"
       /></button
     >
-    <p class="pos">{streamEnded}</p>
+    <p class="stream-text">{streamEnded}</p>
   {/if}
 
 <style>
-  :global(vm-playback-control) {
-    --vm-control-scale: 1.7;
-  }
-
   :global(.custom-icon) {
     margin-left: 3px;
     transform: rotate(20deg);
@@ -86,7 +82,7 @@
     text-align: left;
   }
 
-  .pos {
+  .stream-text {
     position: absolute;
     top: 32%;
     left: 35%;
@@ -107,7 +103,6 @@
     letter-spacing: 2px;
     font-weight: 400;
     border: none;
-    border-radius: 25px;
     background: transparent;
     cursor: pointer;
     text-transform: uppercase;
@@ -115,10 +110,6 @@
   }
 
   @media (max-width: 750px) {
-    :global(vm-playback-control) {
-      --vm-control-scale: 1.7;
-    }
-
     :global(.custom-icon) {
       margin-left: 3px;
       transform: rotate(20deg);
@@ -133,7 +124,7 @@
     p {
       font-size: 0.7rem;
     }
-    .pos {
+    .stream-text {
       position: absolute;
       top: 22%;
       left: 36%;
