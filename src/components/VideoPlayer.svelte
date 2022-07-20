@@ -30,7 +30,7 @@
     autoplay
     muted={toMute}
     on:vmPlaybackEnded={videoEnded}
-    {currentTime}
+    currentTime={currentTime}
   >
     <div class="video">
       <Video>
