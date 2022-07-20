@@ -4,11 +4,9 @@
   import { Player, Video } from "@vime/svelte";
   import Icon from "svelte-icons-pack/Icon.svelte";
   import RedoOutlined from "svelte-icons-pack/ai/AiOutlineRedo";
-  let toMute = true;
   let streamEnded;
   let playbackEnded = false;
   let currentTime = 307;
-  let playing = true;
   let playerControl = true;
 
   const restart = () => {
@@ -24,11 +22,10 @@
   };
 </script>
 
-{#if playing}
   <Player
     controls={playerControl}
     autoplay
-    muted={toMute}
+    muted
     on:vmPlaybackEnded={videoEnded}
     currentTime={currentTime}
   >
@@ -57,7 +54,6 @@
     >
     <p class="pos">{streamEnded}</p>
   {/if}
-{/if}
 
 <style>
   :global(vm-playback-control) {
